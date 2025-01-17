@@ -8,13 +8,15 @@ body, h1, h2, h3, p, ul, li, a, input, textarea, button {
 
 body {
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background: #f3f4f7;
+    color: #333;
+    scroll-behavior: smooth;
 }
 
 /* Header */
 header {
-    background: #333;
-    color: #fff;
+    background: linear-gradient(45deg, #ff5722, #ff9800);
+    color: white;
     padding: 1.5rem;
     text-align: center;
 }
@@ -38,22 +40,22 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #00f2fe;
+    color: #333;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    background: linear-gradient(to right, #4facfe, #00f2fe);
     color: white;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
     position: relative;
-    overflow: hidden;
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .cta-button {
@@ -74,27 +76,41 @@ header nav ul li a:hover {
 }
 
 /* Sections */
-section {
-    padding: 3rem 2rem;
-    margin: 2rem 0;
+.section {
+    padding: 4rem 2rem;
+    margin: 2rem auto;
     background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Skills */
 .skills-grid {
     display: flex;
-    justify-content: space-around;
-    gap: 1.5rem;
-    margin-top: 1rem;
+    gap: 2rem;
 }
 
-.skills-grid div ul {
-    list-style: none;
+.skill-card {
+    flex: 1;
+    padding: 2rem;
+    background: linear-gradient(135deg, #42a5f5, #478ed1);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.skills-grid li {
-    margin-bottom: 0.5rem;
+/* Projects */
+.project-card {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.project-card:hover {
+    border-color: #00f2fe;
+    transform: scale(1.05);
 }
 
 /* Contact Form */
@@ -102,7 +118,7 @@ section {
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    margin: 1rem auto;
+    margin: 2rem auto;
 }
 
 #contact form input, #contact form textarea {
@@ -114,8 +130,8 @@ section {
 
 #contact form button {
     padding: 0.75rem;
-    background: #333;
-    color: #fff;
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -123,17 +139,35 @@ section {
 }
 
 #contact form button:hover {
+    background: linear-gradient(135deg, #388e3c, #689f38);
+}
+
+/* Scroll to Top */
+#scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#scroll-top:hover {
     background: #00f2fe;
 }
 
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
-}
-    text-align: center;
-    padding: 1rem 0;
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
