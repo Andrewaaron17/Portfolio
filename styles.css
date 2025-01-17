@@ -3,17 +3,19 @@ body, h1, h2, h3, p, ul, li, a, input, textarea, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
+/* Header */
 header {
     background: #333;
     color: #fff;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
 }
 
@@ -31,56 +33,107 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
+header nav ul li a:hover {
+    color: #00f2fe;
+}
+
+/* Hero Section */
 .hero {
-    background: #f4f4f4;
-    padding: 2rem;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
     text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
 }
 
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Sections */
 section {
-    padding: 2rem;
+    padding: 3rem 2rem;
     margin: 2rem 0;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .skills-grid {
     display: flex;
     justify-content: space-around;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .skills-grid div ul {
     list-style: none;
-    padding: 0;
 }
 
-.project-list article {
-    margin-bottom: 1.5rem;
+.skills-grid li {
+    margin-bottom: 0.5rem;
 }
 
+/* Contact Form */
 #contact form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 1rem auto;
 }
 
 #contact form input, #contact form textarea {
     margin-bottom: 1rem;
-    padding: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 #contact form button {
-    padding: 0.7rem;
+    padding: 0.75rem;
     background: #333;
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
+#contact form button:hover {
+    background: #00f2fe;
+}
+
+/* Footer */
 footer {
     background: #333;
     color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
     text-align: center;
     padding: 1rem 0;
 }
